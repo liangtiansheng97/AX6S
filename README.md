@@ -301,8 +301,6 @@ IPv4 子网掩码：255.255.255.0
 ```
 点击 `保存&应用`，即可访问光猫管理界面。
 
-
-
 ### 打开红米AX6S的IPV6
 路由页面设置ipv6方式为 native 模式，修改 /etc/config/dhcp
 config dhcp 'lan'
