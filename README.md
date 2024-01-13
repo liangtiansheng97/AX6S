@@ -303,6 +303,7 @@ IPv4 子网掩码：255.255.255.0
 
 ### 打开红米AX6S的IPV6
 路由页面设置ipv6方式为 native 模式，修改 /etc/config/dhcp
+    
     config dhcp 'lan'
             option interface 'lan'
             option start '100'
@@ -312,7 +313,6 @@ IPv4 子网掩码：255.255.255.0
             option ra 'hybrid'
             option dhcpv6 'hybrid'
             option ndp 'hybrid'
-    
     config dhcp 'wan6'
             option interface 'wan'
             option ra 'hybrid'
