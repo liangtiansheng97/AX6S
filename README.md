@@ -300,3 +300,23 @@ IPv4 子网掩码：255.255.255.0
 创建/分配防火墙区域：wan
 ```
 点击 `保存&应用`，即可访问光猫管理界面。
+### 打开红米AX6S的IPV6
+路由页面设置ipv6方式为 native 模式，修改 /etc/config/dhcp
+config dhcp 'lan'
+        option interface 'lan'
+        option start '100'
+        option limit '150'
+        option leasetime '12h'
+        option ra_management '1'
+        option ra 'hybrid'
+        option dhcpv6 'hybrid'
+        option ndp 'hybrid'
+
+config dhcp 'wan6'
+        option interface 'wan'
+        option ra 'hybrid'
+        option dhcpv6 'hybrid'
+        option ndp 'hybrid'
+        option master '1'
+
+新版本有开启关闭防火墙开关，点击关闭就能获得IPV6
